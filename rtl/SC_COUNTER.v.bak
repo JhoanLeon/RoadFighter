@@ -1,0 +1,69 @@
+//****************************************
+// Code taken from book: FPGA PROTOTYPING BY VERILOG EXAMPLES - Pong P. Chu
+// Adapted by: Jhoan Esteban León
+//****************************************
+
+//=======================================================
+//  MODULE Definition
+//=======================================================
+
+module CC_COUNTER #(parameter N=10)
+(
+
+	//////////// INPUTS //////////
+	input wire CC_COUNTER_CLOCK,
+	input wire CC_COUNTER_RESET_InHigh,
+	
+	input wire CC_COUNTER_ENABLE,
+	
+	//////////// OUTPUTS ////////// 
+	output wire [N-1:0] CC_COUNTER_REGCOUNT, //Output bus for count
+	output wire CC_COUNTER_ENDCOUNT //Output flag for end of count
+
+);
+
+//=======================================================
+//  REG/WIRE declarations
+//=======================================================
+
+reg [N-1:0] R_Register; //Registers for sequential part of counter
+reg [N-1:0] R_Next;
+
+reg [5:0] pointa = 6'b111001;
+reg [3:0] pointb = 4'b1011;
+
+//reg [9:0] total;
+
+//=======================================================
+//  Structural coding
+//=======================================================
+
+
+//INPUT LOGIC: COMBINATIONAL
+always @(*)
+begin
+	if (CC_COUNTER_ENABLE == 1'b1)
+		//R_Next = R_Register + 1'b1;
+		R_Next = {6'b000000, pointa[5:2]};
+		//R_Next = R_Register << 2'b01; //Ese número indica los bits de desplazamiento 
+	else
+		R_Next = R_Register;
+end
+
+
+//STATE REGISTER: SEQUENTIAL
+always @(posedge CC_COUNTER_CLOCK, posedge CC_COUNTER_RESET_InHigh)
+	if (CC_COUNTER_RESET_InHigh == 1'b1)
+		//R_Register <= 8'b11010110;
+		R_Register <= 10'b0000000000;
+	else
+		R_Register <= R_Next;
+
+
+//OUTPUT LOGIC: COMBINATIONAL
+assign CC_COUNTER_REGCOUNT = R_Register;
+assign CC_COUNTER_ENDCOUNT = (R_Register == 2**N - 1)? 1'b1 : 1'b0;
+//assign CC_COUNTER_ENDCOUNT = (R_Register == 8'b00001111)? 1'b1 : 1'b0; //Alternative form to comparate output
+
+
+endmodule

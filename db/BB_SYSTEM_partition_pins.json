@@ -1,0 +1,73 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_DIN_Out",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_NCS_Out",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_CLK_Out",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_RESET_InLow",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_LEFT_InLow",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_RIGHT_InLow",
+					"strict" : false
+				},
+				{
+					"name" : "BB_SYSTEM_START_InLow",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

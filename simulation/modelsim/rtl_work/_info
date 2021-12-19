@@ -1,0 +1,560 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim
+vBB_SYSTEM
+Z1 !s110 1605118603
+!i10b 1
+!s100 Fg[7z:KEQO_?z1]3I=Cf10
+ITGU2O;QgL=d>_]UP]0`X@2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1587567001
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v
+L0 6
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1605118603.000000
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work {+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER}
+Z6 tCvgOpt 0
+n@b@b_@s@y@s@t@e@m
+vCC_COMPARATOR_LEVEL
+Z7 !s110 1605118604
+!i10b 1
+!s100 89nnMbQW[0e@>OTSI_m1h1
+I`15L_47^;^lSRCj;afe9^2
+R2
+R0
+w1584985747
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_COMPARATOR_LEVEL.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_COMPARATOR_LEVEL.v
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_COMPARATOR_LEVEL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_COMPARATOR_LEVEL.v|
+!i113 1
+R5
+Z8 !s92 -vlog01compat -work work {+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl}
+R6
+n@c@c_@c@o@m@p@a@r@a@t@o@r_@l@e@v@e@l
+vCC_COMPARATOR_LOSE
+R7
+!i10b 1
+!s100 JUo8B5d3d[^f[;^ITMeFU3
+ISOHS]ZF_Qh6PMC2]DZSEi2
+R2
+R0
+w1584428073
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_COMPARATOR_LOSE.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_COMPARATOR_LOSE.v
+L0 6
+R3
+r1
+!s85 0
+31
+Z9 !s108 1605118604.000000
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_COMPARATOR_LOSE.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_COMPARATOR_LOSE.v|
+!i113 1
+R5
+R8
+R6
+n@c@c_@c@o@m@p@a@r@a@t@o@r_@l@o@s@e
+vCC_JOINER
+R1
+!i10b 1
+!s100 e0nn]R94XUGORG=@E1haW1
+I0h7Gk2Fc?b3fNU7I3l6V83
+R2
+R0
+w1584427150
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_JOINER.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_JOINER.v
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_JOINER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_JOINER.v|
+!i113 1
+R5
+R8
+R6
+n@c@c_@j@o@i@n@e@r
+vCC_SELECTOR_SCREEN
+Z10 !s110 1605118602
+!i10b 1
+!s100 CL1W^TXTa`LII51HBkmak3
+I96PnXOK1T0Om?nMM8Y2RZ3
+R2
+R0
+w1584986644
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_SELECTOR_SCREEN.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_SELECTOR_SCREEN.v
+L0 6
+R3
+r1
+!s85 0
+31
+Z11 !s108 1605118602.000000
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_SELECTOR_SCREEN.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_SELECTOR_SCREEN.v|
+!i113 1
+R5
+R8
+R6
+n@c@c_@s@e@l@e@c@t@o@r_@s@c@r@e@e@n
+vCC_TRANSITION
+R10
+!i10b 1
+!s100 ge=0G4J>Tf`k7DhzWo<mm2
+IK?KRMcO:en`Xh5=AF2TCB0
+R2
+R0
+w1585021093
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_TRANSITION.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_TRANSITION.v
+L0 6
+R3
+r1
+!s85 0
+31
+R11
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_TRANSITION.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_TRANSITION.v|
+!i113 1
+R5
+R8
+R6
+n@c@c_@t@r@a@n@s@i@t@i@o@n
+vIMAGEN
+R10
+!i10b 1
+!s100 VJ1<QEIeOK=MAOG]B2TaT3
+I7LCQLnI6azWLiB_hCX=Ja3
+R2
+R0
+w1573137285
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/IMAGEN.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/IMAGEN.v
+L0 14
+R3
+r1
+!s85 0
+31
+R11
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/IMAGEN.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/IMAGEN.v|
+!i113 1
+R5
+R8
+R6
+n@i@m@a@g@e@n
+vmatrix_ctrl
+R10
+!i10b 1
+!s100 e8fJ::8FZhBf=Yo62HC<D0
+IlRcKW60h2i6M8F4QOj6532
+R2
+R0
+w1554920988
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/max7219_ctrl.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/max7219_ctrl.v
+L0 18
+R3
+r1
+!s85 0
+31
+R11
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/max7219_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/max7219_ctrl.v|
+!i113 1
+R5
+R8
+R6
+vRandom1
+Z12 !s110 1605118601
+!i10b 1
+!s100 GnE>P]RW?1lGaX8AMD_jT2
+I5oodT9:]ACB0g<U5nhJ[f1
+R2
+R0
+w1588520003
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/Random1.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/Random1.v
+L0 3
+R3
+r1
+!s85 0
+31
+Z13 !s108 1605118601.000000
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/Random1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/Random1.v|
+!i113 1
+R5
+R8
+R6
+n@random1
+vSC_COUNTER_SCORE
+R1
+!i10b 1
+!s100 6bGC78N_Jb:NGWJPSj1;E3
+I5hKThH8zL3XHP8ba]6kEX0
+R2
+R0
+w1584462540
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_SCORE.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_SCORE.v
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_SCORE.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_SCORE.v|
+!i113 1
+R5
+R8
+R6
+n@s@c_@c@o@u@n@t@e@r_@s@c@o@r@e
+vSC_COUNTER_TRANSITION
+R12
+!i10b 1
+!s100 i3F>D32iGB0k_:ZIRX]Rd3
+I]gaLM3R6Sk54b5Pd8nUM?0
+R2
+R0
+w1584384774
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_TRANSITION.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_TRANSITION.v
+L0 6
+R3
+r1
+!s85 0
+31
+R13
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_TRANSITION.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_TRANSITION.v|
+!i113 1
+R5
+R8
+R6
+n@s@c_@c@o@u@n@t@e@r_@t@r@a@n@s@i@t@i@o@n
+vSC_COUNTER_VEL1
+R12
+!i10b 1
+!s100 B`STb@m@R2Z9H47HP@E282
+In4E7L[:kiVzdnL9KfUbU[0
+R2
+R0
+w1584985694
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL1.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL1.v
+L0 6
+R3
+r1
+!s85 0
+31
+R13
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL1.v|
+!i113 1
+R5
+R8
+R6
+n@s@c_@c@o@u@n@t@e@r_@v@e@l1
+vSC_COUNTER_VEL2
+R12
+!i10b 1
+!s100 Nk43VPlUElXTPT@_jkA9Y1
+ISk;`Z<ad360mg<nHUoOO23
+R2
+R0
+w1584389316
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL2.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL2.v
+L0 6
+R3
+r1
+!s85 0
+31
+R13
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL2.v|
+!i113 1
+R5
+R8
+R6
+n@s@c_@c@o@u@n@t@e@r_@v@e@l2
+vSC_COUNTER_VEL3
+R12
+!i10b 1
+!s100 WU0^9bXNk^:m17Njgg65E0
+IKREm:H4nzMdICDRN=hFCa0
+R2
+R0
+w1584985927
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL3.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL3.v
+L0 6
+R3
+r1
+!s85 0
+31
+R13
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL3.v|
+!i113 1
+R5
+R8
+R6
+n@s@c_@c@o@u@n@t@e@r_@v@e@l3
+vSC_COUNTER_VELOCITY
+R1
+!i10b 1
+!s100 65G>5Vj`dSfoi3EkdbU0l2
+ISgJ5fCnFo^glWL0hX1O<G1
+R2
+R0
+w1584424480
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VELOCITY.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VELOCITY.v
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VELOCITY.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VELOCITY.v|
+!i113 1
+R5
+R8
+R6
+n@s@c_@c@o@u@n@t@e@r_@v@e@l@o@c@i@t@y
+vSC_GENERATOR_ENVIRONMENT
+R7
+!i10b 1
+!s100 cZ6G7ND1[SHNUQaA2@Bo12
+IR^NP13MOelDgP9k@?<42b1
+R2
+R0
+w1584980110
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_GENERATOR_ENVIRONMENT.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_GENERATOR_ENVIRONMENT.v
+L0 6
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_GENERATOR_ENVIRONMENT.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_GENERATOR_ENVIRONMENT.v|
+!i113 1
+R5
+R8
+R6
+n@s@c_@g@e@n@e@r@a@t@o@r_@e@n@v@i@r@o@n@m@e@n@t
+vSC_REGGENERAL
+R12
+!i10b 1
+!s100 ?_;DWfzkVbg@Q?FYN7JhV2
+I:I5eY;hDzHT:_fKE=D:iN3
+R2
+R0
+w1584386802
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGGENERAL.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGGENERAL.v
+L0 9
+R3
+r1
+!s85 0
+31
+R13
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGGENERAL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGGENERAL.v|
+!i113 1
+R5
+R8
+R6
+n@s@c_@r@e@g@g@e@n@e@r@a@l
+vSC_REGISTER_ENVIRONMENT
+R1
+!i10b 1
+!s100 Pg2GOk=j2lHTmSjae]`Xo2
+I6[WnTWKO44mDd5aK449Af3
+R2
+R0
+w1584386712
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGISTER_ENVIRONMENT.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGISTER_ENVIRONMENT.v
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGISTER_ENVIRONMENT.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGISTER_ENVIRONMENT.v|
+!i113 1
+R5
+R8
+R6
+n@s@c_@r@e@g@i@s@t@e@r_@e@n@v@i@r@o@n@m@e@n@t
+vSC_REGSHIFTER_CAR
+R10
+!i10b 1
+!s100 SmQ8BM3EEGIef[KU;O^FQ1
+IDWNZ@aR8IS5e6fd^A5ZMO2
+R2
+R0
+w1588180629
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGSHIFTER_CAR.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGSHIFTER_CAR.v
+L0 6
+R3
+r1
+!s85 0
+31
+R11
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGSHIFTER_CAR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGSHIFTER_CAR.v|
+!i113 1
+R5
+R8
+R6
+n@s@c_@r@e@g@s@h@i@f@t@e@r_@c@a@r
+vSC_STATEMACHINE_CAR
+R10
+!i10b 1
+!s100 7=iSg6`M<BE5Yn@L:>Jb13
+IgC47Ph21GgZ[aHW:9gXm12
+R2
+R0
+w1587683048
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_CAR.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_CAR.v
+L0 6
+R3
+r1
+!s85 0
+31
+R11
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_CAR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_CAR.v|
+!i113 1
+R5
+R8
+R6
+n@s@c_@s@t@a@t@e@m@a@c@h@i@n@e_@c@a@r
+vSC_STATEMACHINE_ENVIRONMENT
+R12
+!i10b 1
+!s100 RIbnO1^17FY6:XgTMkaA60
+I^e9lHE4TK;[<SYZF`IQ_Y2
+R2
+R0
+w1585020498
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_ENVIRONMENT.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_ENVIRONMENT.v
+L0 6
+R3
+r1
+!s85 0
+31
+R13
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_ENVIRONMENT.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_ENVIRONMENT.v|
+!i113 1
+R5
+R8
+R6
+n@s@c_@s@t@a@t@e@m@a@c@h@i@n@e_@e@n@v@i@r@o@n@m@e@n@t
+vSC_STATEMACHINE_RANDOM
+R7
+!i10b 1
+!s100 G=9PANCEZbXI[a<S4[[0K1
+I>c70CP4N`97IG87a4fFbH0
+R2
+R0
+w1584985506
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_RANDOM.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_RANDOM.v
+L0 6
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_RANDOM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_RANDOM.v|
+!i113 1
+R5
+R8
+R6
+n@s@c_@s@t@a@t@e@m@a@c@h@i@n@e_@r@a@n@d@o@m
+vshift_reg_start_done
+R10
+!i10b 1
+!s100 OVG8K<j?zB2^<NTNZo`DB3
+Ic3o9L:86CN9_Yz?`To4T82
+R2
+R0
+w1583970001
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/shift_reg_start_done.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/shift_reg_start_done.v
+L0 34
+R3
+r1
+!s85 0
+31
+R11
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/shift_reg_start_done.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/shift_reg_start_done.v|
+!i113 1
+R5
+R8
+R6
+vSI_DEBOUNCE
+R10
+!i10b 1
+!s100 6zPLM03WWnR1G9>XEe=_31
+I6A3X9Y2FXdHB0?JGZ@URG3
+R2
+R0
+w1583969984
+8D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SI_DEBOUNCE.v
+FD:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SI_DEBOUNCE.v
+L0 44
+R3
+r1
+!s85 0
+31
+R11
+!s107 D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SI_DEBOUNCE.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl|D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SI_DEBOUNCE.v|
+!i113 1
+R5
+R8
+R6
+n@s@i_@d@e@b@o@u@n@c@e

@@ -1,0 +1,961 @@
+Analysis & Synthesis report for BB_SYSTEM
+Wed Nov 25 12:12:01 2020
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |BB_SYSTEM|matrix_ctrl:MAXC_u0|state_reg
+  9. State Machine - |BB_SYSTEM|SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0|SC_STATEMACHINE_RANDOM:SC_STATEMACHINE_RANDOM_u0|St_Register
+ 10. State Machine - |BB_SYSTEM|SC_STATEMACHINE_ENVIRONMENT:SC_STATEMACHINE_ENVIRONMENT_u0|STATE_Register
+ 11. State Machine - |BB_SYSTEM|SC_STATEMACHINE_CAR:SC_STATEMACHINE_CAR_u0|St_Register
+ 12. User-Specified and Inferred Latches
+ 13. Registers Removed During Synthesis
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Inverted Register Statistics
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Parameter Settings for User Entity Instance: SI_DEBOUNCE:DB_START_u0
+ 19. Parameter Settings for User Entity Instance: SI_DEBOUNCE:DB_RIGHT_u0
+ 20. Parameter Settings for User Entity Instance: SI_DEBOUNCE:DB_LEFT_u0
+ 21. Parameter Settings for User Entity Instance: SC_STATEMACHINE_CAR:SC_STATEMACHINE_CAR_u0
+ 22. Parameter Settings for User Entity Instance: SC_REGSHIFTER_CAR:SC_REGSHIFTER_CAR_u0
+ 23. Parameter Settings for User Entity Instance: SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u7
+ 24. Parameter Settings for User Entity Instance: SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u6
+ 25. Parameter Settings for User Entity Instance: SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u5
+ 26. Parameter Settings for User Entity Instance: SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u4
+ 27. Parameter Settings for User Entity Instance: SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u3
+ 28. Parameter Settings for User Entity Instance: SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u2
+ 29. Parameter Settings for User Entity Instance: SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u1
+ 30. Parameter Settings for User Entity Instance: SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u0
+ 31. Parameter Settings for User Entity Instance: SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0|SC_STATEMACHINE_RANDOM:SC_STATEMACHINE_RANDOM_u0
+ 32. Parameter Settings for User Entity Instance: SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0|Random1:Random1_u0
+ 33. Parameter Settings for User Entity Instance: SC_COUNTER_SCORE:SC_COUNTER_SCORE_u0
+ 34. Parameter Settings for User Entity Instance: SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0
+ 35. Parameter Settings for User Entity Instance: SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0
+ 36. Parameter Settings for User Entity Instance: SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0
+ 37. Parameter Settings for User Entity Instance: SC_COUNTER_TRANSITION:SC_COUNTER_TRANSITION_u0
+ 38. Parameter Settings for User Entity Instance: matrix_ctrl:MAXC_u0|shift_reg_start_done:shift_reg_start_done_unit_0
+ 39. Port Connectivity Checks: "matrix_ctrl:MAXC_u0|shift_reg_start_done:shift_reg_start_done_unit_0"
+ 40. Port Connectivity Checks: "matrix_ctrl:MAXC_u0"
+ 41. Port Connectivity Checks: "SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0"
+ 42. Port Connectivity Checks: "SC_STATEMACHINE_ENVIRONMENT:SC_STATEMACHINE_ENVIRONMENT_u0"
+ 43. Post-Synthesis Netlist Statistics for Top Partition
+ 44. Elapsed Time Per Partition
+ 45. Analysis & Synthesis Messages
+ 46. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Nov 25 12:12:01 2020       ;
+; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name                      ; BB_SYSTEM                                   ;
+; Top-level Entity Name              ; BB_SYSTEM                                   ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 589                                         ;
+;     Total combinational functions  ; 579                                         ;
+;     Dedicated logic registers      ; 266                                         ;
+; Total registers                    ; 266                                         ;
+; Total pins                         ; 16                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE22F17C6       ;                    ;
+; Top-level entity name                                            ; BB_SYSTEM          ; BB_SYSTEM          ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone IV GX      ;
+; Maximum processors allowed for parallel compilation              ; 2                  ;                    ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++-----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path  ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                      ; Library ;
++-----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
+; rtl/Random1.v                     ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/Random1.v                     ;         ;
+; rtl/SC_COUNTER_VEL3.v             ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL3.v             ;         ;
+; rtl/SC_COUNTER_VEL2.v             ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL2.v             ;         ;
+; rtl/SC_COUNTER_VEL1.v             ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL1.v             ;         ;
+; rtl/SC_REGGENERAL.v               ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGGENERAL.v               ;         ;
+; rtl/SC_COUNTER_TRANSITION.v       ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_TRANSITION.v       ;         ;
+; rtl/SC_STATEMACHINE_ENVIRONMENT.v ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_ENVIRONMENT.v ;         ;
+; rtl/SC_STATEMACHINE_CAR.v         ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_CAR.v         ;         ;
+; rtl/SC_REGSHIFTER_CAR.v           ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGSHIFTER_CAR.v           ;         ;
+; rtl/SI_DEBOUNCE.v                 ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SI_DEBOUNCE.v                 ;         ;
+; rtl/shift_reg_start_done.v        ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/shift_reg_start_done.v        ;         ;
+; rtl/max7219_ctrl.v                ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/max7219_ctrl.v                ;         ;
+; rtl/IMAGEN.v                      ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/IMAGEN.v                      ;         ;
+; rtl/CC_TRANSITION.v               ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_TRANSITION.v               ;         ;
+; rtl/CC_SELECTOR_SCREEN.v          ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_SELECTOR_SCREEN.v          ;         ;
+; rtl/CC_JOINER.v                   ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_JOINER.v                   ;         ;
+; BB_SYSTEM.v                       ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v                       ;         ;
+; rtl/SC_COUNTER_VELOCITY.v         ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VELOCITY.v         ;         ;
+; rtl/SC_COUNTER_SCORE.v            ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_SCORE.v            ;         ;
+; rtl/SC_REGISTER_ENVIRONMENT.v     ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGISTER_ENVIRONMENT.v     ;         ;
+; rtl/CC_COMPARATOR_LEVEL.v         ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_COMPARATOR_LEVEL.v         ;         ;
+; rtl/SC_GENERATOR_ENVIRONMENT.v    ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_GENERATOR_ENVIRONMENT.v    ;         ;
+; rtl/CC_COMPARATOR_LOSE.v          ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_COMPARATOR_LOSE.v          ;         ;
+; rtl/SC_STATEMACHINE_RANDOM.v      ; yes             ; User Verilog HDL File  ; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_RANDOM.v      ;         ;
++-----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                            ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimated Total logic elements              ; 589                      ;
+;                                             ;                          ;
+; Total combinational functions               ; 579                      ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 202                      ;
+;     -- 3 input functions                    ; 110                      ;
+;     -- <=2 input functions                  ; 267                      ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 422                      ;
+;     -- arithmetic mode                      ; 157                      ;
+;                                             ;                          ;
+; Total registers                             ; 266                      ;
+;     -- Dedicated logic registers            ; 266                      ;
+;     -- I/O registers                        ; 0                        ;
+;                                             ;                          ;
+; I/O pins                                    ; 16                       ;
+;                                             ;                          ;
+; Embedded Multiplier 9-bit elements          ; 0                        ;
+;                                             ;                          ;
+; Maximum fan-out node                        ; BB_SYSTEM_CLOCK_50~input ;
+; Maximum fan-out                             ; 266                      ;
+; Total fan-out                               ; 2680                     ;
+; Average fan-out                             ; 3.06                     ;
++---------------------------------------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                        ;
++-----------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
+; Compilation Hierarchy Node                                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                              ; Entity Name                 ; Library Name ;
++-----------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
+; |BB_SYSTEM                                                      ; 579 (0)             ; 266 (0)                   ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |BB_SYSTEM                                                                                                       ; BB_SYSTEM                   ; work         ;
+;    |CC_COMPARATOR_LEVEL:CC_COMPARATOR_LEVEL_u0|                 ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|CC_COMPARATOR_LEVEL:CC_COMPARATOR_LEVEL_u0                                                            ; CC_COMPARATOR_LEVEL         ; work         ;
+;    |CC_COMPARATOR_LOSE:CC_COMPARATOR_LOSE_u0|                   ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|CC_COMPARATOR_LOSE:CC_COMPARATOR_LOSE_u0                                                              ; CC_COMPARATOR_LOSE          ; work         ;
+;    |CC_JOINER:CC_JOINER_u0|                                     ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|CC_JOINER:CC_JOINER_u0                                                                                ; CC_JOINER                   ; work         ;
+;    |CC_SELECTOR_SCREEN:CC_SELECTOR_SCREEN_u0|                   ; 19 (19)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|CC_SELECTOR_SCREEN:CC_SELECTOR_SCREEN_u0                                                              ; CC_SELECTOR_SCREEN          ; work         ;
+;    |CC_TRANSITION:CC_TRANSITION_u0|                             ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|CC_TRANSITION:CC_TRANSITION_u0                                                                        ; CC_TRANSITION               ; work         ;
+;    |IMAGEN:IMG_u0|                                              ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|IMAGEN:IMG_u0                                                                                         ; IMAGEN                      ; work         ;
+;    |SC_COUNTER_SCORE:SC_COUNTER_SCORE_u0|                       ; 28 (28)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_COUNTER_SCORE:SC_COUNTER_SCORE_u0                                                                  ; SC_COUNTER_SCORE            ; work         ;
+;    |SC_COUNTER_TRANSITION:SC_COUNTER_TRANSITION_u0|             ; 36 (36)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_COUNTER_TRANSITION:SC_COUNTER_TRANSITION_u0                                                        ; SC_COUNTER_TRANSITION       ; work         ;
+;    |SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|                 ; 60 (11)             ; 22 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0                                                            ; SC_COUNTER_VELOCITY         ; work         ;
+;       |SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|                      ; 25 (25)             ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0                         ; SC_COUNTER_VEL1             ; work         ;
+;       |SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|                      ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0                         ; SC_COUNTER_VEL2             ; work         ;
+;       |SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|                      ; 22 (22)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0                         ; SC_COUNTER_VEL3             ; work         ;
+;    |SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0|       ; 13 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0                                                  ; SC_GENERATOR_ENVIRONMENT    ; work         ;
+;       |Random1:Random1_u0|                                      ; 3 (3)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0|Random1:Random1_u0                               ; Random1                     ; work         ;
+;       |SC_STATEMACHINE_RANDOM:SC_STATEMACHINE_RANDOM_u0|        ; 10 (10)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0|SC_STATEMACHINE_RANDOM:SC_STATEMACHINE_RANDOM_u0 ; SC_STATEMACHINE_RANDOM      ; work         ;
+;    |SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|         ; 64 (0)              ; 64 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0                                                    ; SC_REGISTER_ENVIRONMENT     ; work         ;
+;       |SC_REGGENERAL:SC_REGGENERAL_u0|                          ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u0                     ; SC_REGGENERAL               ; work         ;
+;       |SC_REGGENERAL:SC_REGGENERAL_u1|                          ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u1                     ; SC_REGGENERAL               ; work         ;
+;       |SC_REGGENERAL:SC_REGGENERAL_u2|                          ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u2                     ; SC_REGGENERAL               ; work         ;
+;       |SC_REGGENERAL:SC_REGGENERAL_u3|                          ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u3                     ; SC_REGGENERAL               ; work         ;
+;       |SC_REGGENERAL:SC_REGGENERAL_u4|                          ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u4                     ; SC_REGGENERAL               ; work         ;
+;       |SC_REGGENERAL:SC_REGGENERAL_u5|                          ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u5                     ; SC_REGGENERAL               ; work         ;
+;       |SC_REGGENERAL:SC_REGGENERAL_u6|                          ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u6                     ; SC_REGGENERAL               ; work         ;
+;       |SC_REGGENERAL:SC_REGGENERAL_u7|                          ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u7                     ; SC_REGGENERAL               ; work         ;
+;    |SC_REGSHIFTER_CAR:SC_REGSHIFTER_CAR_u0|                     ; 21 (21)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_REGSHIFTER_CAR:SC_REGSHIFTER_CAR_u0                                                                ; SC_REGSHIFTER_CAR           ; work         ;
+;    |SC_STATEMACHINE_CAR:SC_STATEMACHINE_CAR_u0|                 ; 9 (9)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_STATEMACHINE_CAR:SC_STATEMACHINE_CAR_u0                                                            ; SC_STATEMACHINE_CAR         ; work         ;
+;    |SC_STATEMACHINE_ENVIRONMENT:SC_STATEMACHINE_ENVIRONMENT_u0| ; 30 (30)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SC_STATEMACHINE_ENVIRONMENT:SC_STATEMACHINE_ENVIRONMENT_u0                                            ; SC_STATEMACHINE_ENVIRONMENT ; work         ;
+;    |SI_DEBOUNCE:DB_LEFT_u0|                                     ; 26 (26)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SI_DEBOUNCE:DB_LEFT_u0                                                                                ; SI_DEBOUNCE                 ; work         ;
+;    |SI_DEBOUNCE:DB_RIGHT_u0|                                    ; 26 (26)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SI_DEBOUNCE:DB_RIGHT_u0                                                                               ; SI_DEBOUNCE                 ; work         ;
+;    |SI_DEBOUNCE:DB_START_u0|                                    ; 26 (26)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|SI_DEBOUNCE:DB_START_u0                                                                               ; SI_DEBOUNCE                 ; work         ;
+;    |matrix_ctrl:MAXC_u0|                                        ; 128 (76)            ; 55 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|matrix_ctrl:MAXC_u0                                                                                   ; matrix_ctrl                 ; work         ;
+;       |shift_reg_start_done:shift_reg_start_done_unit_0|        ; 52 (52)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BB_SYSTEM|matrix_ctrl:MAXC_u0|shift_reg_start_done:shift_reg_start_done_unit_0                                  ; shift_reg_start_done        ; work         ;
++-----------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |BB_SYSTEM|matrix_ctrl:MAXC_u0|state_reg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++----------------------------------------+----------------------------------------+----------------------------+------------------------------------+------------------------+------------------------------------+------------------------+-------------------------------------+-------------------------+---------------------------------+---------------------+---------------------------------------+---------------------------+------------------------------------+------------------------+---------------------+-----------------+----------------+
+; Name                                   ; state_reg.DISPLAY_TEST_OFF_WAIT2FINISH ; state_reg.DISPLAY_TEST_OFF ; state_reg.DISPLAY_TEST_WAIT2FINISH ; state_reg.DISPLAY_TEST ; state_reg.DIS_SHUTDOWN_WAIT2FINISH ; state_reg.DIS_SHUTDOWN ; state_reg.SET_SCAN_MODE_WAIT2FINISH ; state_reg.SET_SCAN_MODE ; state_reg.INTENSITY_WAIT2FINISH ; state_reg.INTENSITY ; state_reg.SET_DECODE_MODE_WAIT2FINISH ; state_reg.SET_DECODE_MODE ; state_reg.UPDATE_FRAME_WAIT2FINISH ; state_reg.UPDATE_FRAME ; state_reg.MAIN_LOOP ; state_reg.START ; state_reg.STOP ;
++----------------------------------------+----------------------------------------+----------------------------+------------------------------------+------------------------+------------------------------------+------------------------+-------------------------------------+-------------------------+---------------------------------+---------------------+---------------------------------------+---------------------------+------------------------------------+------------------------+---------------------+-----------------+----------------+
+; state_reg.START                        ; 0                                      ; 0                          ; 0                                  ; 0                      ; 0                                  ; 0                      ; 0                                   ; 0                       ; 0                               ; 0                   ; 0                                     ; 0                         ; 0                                  ; 0                      ; 0                   ; 0               ; 0              ;
+; state_reg.MAIN_LOOP                    ; 0                                      ; 0                          ; 0                                  ; 0                      ; 0                                  ; 0                      ; 0                                   ; 0                       ; 0                               ; 0                   ; 0                                     ; 0                         ; 0                                  ; 0                      ; 1                   ; 1               ; 0              ;
+; state_reg.UPDATE_FRAME                 ; 0                                      ; 0                          ; 0                                  ; 0                      ; 0                                  ; 0                      ; 0                                   ; 0                       ; 0                               ; 0                   ; 0                                     ; 0                         ; 0                                  ; 1                      ; 0                   ; 1               ; 0              ;
+; state_reg.UPDATE_FRAME_WAIT2FINISH     ; 0                                      ; 0                          ; 0                                  ; 0                      ; 0                                  ; 0                      ; 0                                   ; 0                       ; 0                               ; 0                   ; 0                                     ; 0                         ; 1                                  ; 0                      ; 0                   ; 1               ; 0              ;
+; state_reg.SET_DECODE_MODE              ; 0                                      ; 0                          ; 0                                  ; 0                      ; 0                                  ; 0                      ; 0                                   ; 0                       ; 0                               ; 0                   ; 0                                     ; 1                         ; 0                                  ; 0                      ; 0                   ; 1               ; 0              ;
+; state_reg.SET_DECODE_MODE_WAIT2FINISH  ; 0                                      ; 0                          ; 0                                  ; 0                      ; 0                                  ; 0                      ; 0                                   ; 0                       ; 0                               ; 0                   ; 1                                     ; 0                         ; 0                                  ; 0                      ; 0                   ; 1               ; 0              ;
+; state_reg.INTENSITY                    ; 0                                      ; 0                          ; 0                                  ; 0                      ; 0                                  ; 0                      ; 0                                   ; 0                       ; 0                               ; 1                   ; 0                                     ; 0                         ; 0                                  ; 0                      ; 0                   ; 1               ; 0              ;
+; state_reg.INTENSITY_WAIT2FINISH        ; 0                                      ; 0                          ; 0                                  ; 0                      ; 0                                  ; 0                      ; 0                                   ; 0                       ; 1                               ; 0                   ; 0                                     ; 0                         ; 0                                  ; 0                      ; 0                   ; 1               ; 0              ;
+; state_reg.SET_SCAN_MODE                ; 0                                      ; 0                          ; 0                                  ; 0                      ; 0                                  ; 0                      ; 0                                   ; 1                       ; 0                               ; 0                   ; 0                                     ; 0                         ; 0                                  ; 0                      ; 0                   ; 1               ; 0              ;
+; state_reg.SET_SCAN_MODE_WAIT2FINISH    ; 0                                      ; 0                          ; 0                                  ; 0                      ; 0                                  ; 0                      ; 1                                   ; 0                       ; 0                               ; 0                   ; 0                                     ; 0                         ; 0                                  ; 0                      ; 0                   ; 1               ; 0              ;
+; state_reg.DIS_SHUTDOWN                 ; 0                                      ; 0                          ; 0                                  ; 0                      ; 0                                  ; 1                      ; 0                                   ; 0                       ; 0                               ; 0                   ; 0                                     ; 0                         ; 0                                  ; 0                      ; 0                   ; 1               ; 0              ;
+; state_reg.DIS_SHUTDOWN_WAIT2FINISH     ; 0                                      ; 0                          ; 0                                  ; 0                      ; 1                                  ; 0                      ; 0                                   ; 0                       ; 0                               ; 0                   ; 0                                     ; 0                         ; 0                                  ; 0                      ; 0                   ; 1               ; 0              ;
+; state_reg.DISPLAY_TEST                 ; 0                                      ; 0                          ; 0                                  ; 1                      ; 0                                  ; 0                      ; 0                                   ; 0                       ; 0                               ; 0                   ; 0                                     ; 0                         ; 0                                  ; 0                      ; 0                   ; 1               ; 0              ;
+; state_reg.DISPLAY_TEST_WAIT2FINISH     ; 0                                      ; 0                          ; 1                                  ; 0                      ; 0                                  ; 0                      ; 0                                   ; 0                       ; 0                               ; 0                   ; 0                                     ; 0                         ; 0                                  ; 0                      ; 0                   ; 1               ; 0              ;
+; state_reg.DISPLAY_TEST_OFF             ; 0                                      ; 1                          ; 0                                  ; 0                      ; 0                                  ; 0                      ; 0                                   ; 0                       ; 0                               ; 0                   ; 0                                     ; 0                         ; 0                                  ; 0                      ; 0                   ; 1               ; 0              ;
+; state_reg.DISPLAY_TEST_OFF_WAIT2FINISH ; 1                                      ; 0                          ; 0                                  ; 0                      ; 0                                  ; 0                      ; 0                                   ; 0                       ; 0                               ; 0                   ; 0                                     ; 0                         ; 0                                  ; 0                      ; 0                   ; 1               ; 0              ;
+; state_reg.STOP                         ; 0                                      ; 0                          ; 0                                  ; 0                      ; 0                                  ; 0                      ; 0                                   ; 0                       ; 0                               ; 0                   ; 0                                     ; 0                         ; 0                                  ; 0                      ; 0                   ; 1               ; 1              ;
++----------------------------------------+----------------------------------------+----------------------------+------------------------------------+------------------------+------------------------------------+------------------------+-------------------------------------+-------------------------+---------------------------------+---------------------+---------------------------------------+---------------------------+------------------------------------+------------------------+---------------------+-----------------+----------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |BB_SYSTEM|SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0|SC_STATEMACHINE_RANDOM:SC_STATEMACHINE_RANDOM_u0|St_Register                                                                         ;
++------------------------+------------------------+-----------------------+-----------------------+-----------------------+-----------------------+----------------------+----------------------+----------------------+
+; Name                   ; St_Register.St_LEVEL00 ; St_Register.St_LEVEL0 ; St_Register.St_LEVEL3 ; St_Register.St_LEVEL2 ; St_Register.St_LEVEL1 ; St_Register.St_READY ; St_Register.St_START ; St_Register.St_RESET ;
++------------------------+------------------------+-----------------------+-----------------------+-----------------------+-----------------------+----------------------+----------------------+----------------------+
+; St_Register.St_RESET   ; 0                      ; 0                     ; 0                     ; 0                     ; 0                     ; 0                    ; 0                    ; 0                    ;
+; St_Register.St_START   ; 0                      ; 0                     ; 0                     ; 0                     ; 0                     ; 0                    ; 1                    ; 1                    ;
+; St_Register.St_READY   ; 0                      ; 0                     ; 0                     ; 0                     ; 0                     ; 1                    ; 0                    ; 1                    ;
+; St_Register.St_LEVEL1  ; 0                      ; 0                     ; 0                     ; 0                     ; 1                     ; 0                    ; 0                    ; 1                    ;
+; St_Register.St_LEVEL2  ; 0                      ; 0                     ; 0                     ; 1                     ; 0                     ; 0                    ; 0                    ; 1                    ;
+; St_Register.St_LEVEL3  ; 0                      ; 0                     ; 1                     ; 0                     ; 0                     ; 0                    ; 0                    ; 1                    ;
+; St_Register.St_LEVEL0  ; 0                      ; 1                     ; 0                     ; 0                     ; 0                     ; 0                    ; 0                    ; 1                    ;
+; St_Register.St_LEVEL00 ; 1                      ; 0                     ; 0                     ; 0                     ; 0                     ; 0                    ; 0                    ; 1                    ;
++------------------------+------------------------+-----------------------+-----------------------+-----------------------+-----------------------+----------------------+----------------------+----------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |BB_SYSTEM|SC_STATEMACHINE_ENVIRONMENT:SC_STATEMACHINE_ENVIRONMENT_u0|STATE_Register                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------+-----------------------------+----------------------------------+----------------------------------+----------------------------------+--------------------------+---------------------------+----------------------------------+----------------------------------+-----------------------------+---------------------------------+----------------------------+----------------------------+
+; Name                              ; STATE_Register.STATE_SHIFTDOWN_13 ; STATE_Register.STATE_SHIFTDOWN_03 ; STATE_Register.STATE_SHIFTDOWN_12 ; STATE_Register.STATE_SHIFTDOWN_02 ; STATE_Register.STATE_READY3 ; STATE_Register.STATE_READY2 ; STATE_Register.STATE_TRANSITION3 ; STATE_Register.STATE_TRANSITION2 ; STATE_Register.STATE_TRANSITION1 ; STATE_Register.STATE_WIN ; STATE_Register.STATE_LOSE ; STATE_Register.STATE_SHIFTDOWN_1 ; STATE_Register.STATE_SHIFTDOWN_0 ; STATE_Register.STATE_READY1 ; STATE_Register.STATE_TRANSITION ; STATE_Register.STATE_START ; STATE_Register.STATE_RESET ;
++-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------+-----------------------------+----------------------------------+----------------------------------+----------------------------------+--------------------------+---------------------------+----------------------------------+----------------------------------+-----------------------------+---------------------------------+----------------------------+----------------------------+
+; STATE_Register.STATE_RESET        ; 0                                 ; 0                                 ; 0                                 ; 0                                 ; 0                           ; 0                           ; 0                                ; 0                                ; 0                                ; 0                        ; 0                         ; 0                                ; 0                                ; 0                           ; 0                               ; 0                          ; 0                          ;
+; STATE_Register.STATE_START        ; 0                                 ; 0                                 ; 0                                 ; 0                                 ; 0                           ; 0                           ; 0                                ; 0                                ; 0                                ; 0                        ; 0                         ; 0                                ; 0                                ; 0                           ; 0                               ; 1                          ; 1                          ;
+; STATE_Register.STATE_TRANSITION   ; 0                                 ; 0                                 ; 0                                 ; 0                                 ; 0                           ; 0                           ; 0                                ; 0                                ; 0                                ; 0                        ; 0                         ; 0                                ; 0                                ; 0                           ; 1                               ; 0                          ; 1                          ;
+; STATE_Register.STATE_READY1       ; 0                                 ; 0                                 ; 0                                 ; 0                                 ; 0                           ; 0                           ; 0                                ; 0                                ; 0                                ; 0                        ; 0                         ; 0                                ; 0                                ; 1                           ; 0                               ; 0                          ; 1                          ;
+; STATE_Register.STATE_SHIFTDOWN_0  ; 0                                 ; 0                                 ; 0                                 ; 0                                 ; 0                           ; 0                           ; 0                                ; 0                                ; 0                                ; 0                        ; 0                         ; 0                                ; 1                                ; 0                           ; 0                               ; 0                          ; 1                          ;
+; STATE_Register.STATE_SHIFTDOWN_1  ; 0                                 ; 0                                 ; 0                                 ; 0                                 ; 0                           ; 0                           ; 0                                ; 0                                ; 0                                ; 0                        ; 0                         ; 1                                ; 0                                ; 0                           ; 0                               ; 0                          ; 1                          ;
+; STATE_Register.STATE_LOSE         ; 0                                 ; 0                                 ; 0                                 ; 0                                 ; 0                           ; 0                           ; 0                                ; 0                                ; 0                                ; 0                        ; 1                         ; 0                                ; 0                                ; 0                           ; 0                               ; 0                          ; 1                          ;
+; STATE_Register.STATE_WIN          ; 0                                 ; 0                                 ; 0                                 ; 0                                 ; 0                           ; 0                           ; 0                                ; 0                                ; 0                                ; 1                        ; 0                         ; 0                                ; 0                                ; 0                           ; 0                               ; 0                          ; 1                          ;
+; STATE_Register.STATE_TRANSITION1  ; 0                                 ; 0                                 ; 0                                 ; 0                                 ; 0                           ; 0                           ; 0                                ; 0                                ; 1                                ; 0                        ; 0                         ; 0                                ; 0                                ; 0                           ; 0                               ; 0                          ; 1                          ;
+; STATE_Register.STATE_TRANSITION2  ; 0                                 ; 0                                 ; 0                                 ; 0                                 ; 0                           ; 0                           ; 0                                ; 1                                ; 0                                ; 0                        ; 0                         ; 0                                ; 0                                ; 0                           ; 0                               ; 0                          ; 1                          ;
+; STATE_Register.STATE_TRANSITION3  ; 0                                 ; 0                                 ; 0                                 ; 0                                 ; 0                           ; 0                           ; 1                                ; 0                                ; 0                                ; 0                        ; 0                         ; 0                                ; 0                                ; 0                           ; 0                               ; 0                          ; 1                          ;
+; STATE_Register.STATE_READY2       ; 0                                 ; 0                                 ; 0                                 ; 0                                 ; 0                           ; 1                           ; 0                                ; 0                                ; 0                                ; 0                        ; 0                         ; 0                                ; 0                                ; 0                           ; 0                               ; 0                          ; 1                          ;
+; STATE_Register.STATE_READY3       ; 0                                 ; 0                                 ; 0                                 ; 0                                 ; 1                           ; 0                           ; 0                                ; 0                                ; 0                                ; 0                        ; 0                         ; 0                                ; 0                                ; 0                           ; 0                               ; 0                          ; 1                          ;
+; STATE_Register.STATE_SHIFTDOWN_02 ; 0                                 ; 0                                 ; 0                                 ; 1                                 ; 0                           ; 0                           ; 0                                ; 0                                ; 0                                ; 0                        ; 0                         ; 0                                ; 0                                ; 0                           ; 0                               ; 0                          ; 1                          ;
+; STATE_Register.STATE_SHIFTDOWN_12 ; 0                                 ; 0                                 ; 1                                 ; 0                                 ; 0                           ; 0                           ; 0                                ; 0                                ; 0                                ; 0                        ; 0                         ; 0                                ; 0                                ; 0                           ; 0                               ; 0                          ; 1                          ;
+; STATE_Register.STATE_SHIFTDOWN_03 ; 0                                 ; 1                                 ; 0                                 ; 0                                 ; 0                           ; 0                           ; 0                                ; 0                                ; 0                                ; 0                        ; 0                         ; 0                                ; 0                                ; 0                           ; 0                               ; 0                          ; 1                          ;
+; STATE_Register.STATE_SHIFTDOWN_13 ; 1                                 ; 0                                 ; 0                                 ; 0                                 ; 0                           ; 0                           ; 0                                ; 0                                ; 0                                ; 0                        ; 0                         ; 0                                ; 0                                ; 0                           ; 0                               ; 0                          ; 1                          ;
++-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------+-----------------------------+----------------------------------+----------------------------------+----------------------------------+--------------------------+---------------------------+----------------------------------+----------------------------------+-----------------------------+---------------------------------+----------------------------+----------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |BB_SYSTEM|SC_STATEMACHINE_CAR:SC_STATEMACHINE_CAR_u0|St_Register                                                                                                             ;
++------------------------+-----------------------+-----------------------+------------------------+------------------------+----------------------+----------------------+----------------------+
+; Name                   ; St_Register.St_LEFT_1 ; St_Register.St_LEFT_0 ; St_Register.St_RIGHT_1 ; St_Register.St_RIGHT_0 ; St_Register.St_READY ; St_Register.St_START ; St_Register.St_RESET ;
++------------------------+-----------------------+-----------------------+------------------------+------------------------+----------------------+----------------------+----------------------+
+; St_Register.St_RESET   ; 0                     ; 0                     ; 0                      ; 0                      ; 0                    ; 0                    ; 0                    ;
+; St_Register.St_START   ; 0                     ; 0                     ; 0                      ; 0                      ; 0                    ; 1                    ; 1                    ;
+; St_Register.St_READY   ; 0                     ; 0                     ; 0                      ; 0                      ; 1                    ; 0                    ; 1                    ;
+; St_Register.St_RIGHT_0 ; 0                     ; 0                     ; 0                      ; 1                      ; 0                    ; 0                    ; 1                    ;
+; St_Register.St_RIGHT_1 ; 0                     ; 0                     ; 1                      ; 0                      ; 0                    ; 0                    ; 1                    ;
+; St_Register.St_LEFT_0  ; 0                     ; 1                     ; 0                      ; 0                      ; 0                    ; 0                    ; 1                    ;
+; St_Register.St_LEFT_1  ; 1                     ; 0                     ; 0                      ; 0                      ; 0                    ; 0                    ; 1                    ;
++------------------------+-----------------------+-----------------------+------------------------+------------------------+----------------------+----------------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                   ;
++----------------------------------------------------+-----------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                     ; Free of Timing Hazards ;
++----------------------------------------------------+-----------------------------------------+------------------------+
+; matrix_ctrl:MAXC_u0|ctrl_sr[1]                     ; matrix_ctrl:MAXC_u0|state_reg.MAIN_LOOP ; yes                    ;
+; matrix_ctrl:MAXC_u0|ctrl_sr[0]                     ; matrix_ctrl:MAXC_u0|state_reg.MAIN_LOOP ; yes                    ;
+; Number of user-specified and inferred latches = 2  ;                                         ;                        ;
++----------------------------------------------------+-----------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                                   ;
++---------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                                       ; Reason for Removal                                                                                             ;
++---------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+
+; matrix_ctrl:MAXC_u0|Trig_Register1                                                                                  ; Merged with matrix_ctrl:MAXC_u0|clk_driver_reg~0                                                               ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[0]                   ; Merged with matrix_ctrl:MAXC_u0|clk_driver_reg~3                                                               ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[0]                   ; Merged with matrix_ctrl:MAXC_u0|clk_driver_reg~3                                                               ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[0]                   ; Merged with matrix_ctrl:MAXC_u0|clk_driver_reg~3                                                               ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[1]                   ; Merged with matrix_ctrl:MAXC_u0|clk_driver_reg~2                                                               ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[1]                   ; Merged with matrix_ctrl:MAXC_u0|clk_driver_reg~2                                                               ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[1]                   ; Merged with matrix_ctrl:MAXC_u0|clk_driver_reg~2                                                               ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[2]                   ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[2]  ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[2]                   ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[2]  ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[2]                   ; Merged with matrix_ctrl:MAXC_u0|clk_driver_reg~1                                                               ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[3]                   ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[3]  ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[3]                   ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[3]  ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[3]                   ; Merged with matrix_ctrl:MAXC_u0|clk_driver_reg~0                                                               ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[4]                   ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[4]  ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[4]                   ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[4]  ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[5]                   ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[5]  ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[5]                   ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[5]  ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[6]                   ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[6]  ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[6]                   ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[6]  ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[7]                   ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[7]  ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[7]                   ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[7]  ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[8]                   ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[8]  ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[8]                   ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[8]  ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[9]                   ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[9]  ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[9]                   ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[9]  ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[10]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[10] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[10]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[10] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[11]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[11] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[11]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[11] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[12]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[12] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[12]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[12] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[13]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[13] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[13]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[13] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[14]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[14] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[14]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[14] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[15]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[15] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[15]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[15] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[16]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[16] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[16]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[16] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[17]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[17] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[17]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[17] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[18]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[18] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[18]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[18] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[19]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[19] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[19]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[19] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[20]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[20] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[20]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[20] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[21]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[21] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[21]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[21] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[22]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[22] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[22]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0|COUNTER_Register[22] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[23]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[23] ;
+; SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0|COUNTER_Register[24]                  ; Merged with SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0|COUNTER_Register[24] ;
+; matrix_ctrl:MAXC_u0|state_reg~21                                                                                    ; Lost fanout                                                                                                    ;
+; matrix_ctrl:MAXC_u0|state_reg~22                                                                                    ; Lost fanout                                                                                                    ;
+; matrix_ctrl:MAXC_u0|state_reg~23                                                                                    ; Lost fanout                                                                                                    ;
+; matrix_ctrl:MAXC_u0|state_reg~25                                                                                    ; Lost fanout                                                                                                    ;
+; matrix_ctrl:MAXC_u0|state_reg~26                                                                                    ; Lost fanout                                                                                                    ;
+; matrix_ctrl:MAXC_u0|state_reg~27                                                                                    ; Lost fanout                                                                                                    ;
+; matrix_ctrl:MAXC_u0|state_reg~28                                                                                    ; Lost fanout                                                                                                    ;
+; SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0|SC_STATEMACHINE_RANDOM:SC_STATEMACHINE_RANDOM_u0|St_Register~4 ; Lost fanout                                                                                                    ;
+; SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0|SC_STATEMACHINE_RANDOM:SC_STATEMACHINE_RANDOM_u0|St_Register~5 ; Lost fanout                                                                                                    ;
+; SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0|SC_STATEMACHINE_RANDOM:SC_STATEMACHINE_RANDOM_u0|St_Register~6 ; Lost fanout                                                                                                    ;
+; SC_STATEMACHINE_ENVIRONMENT:SC_STATEMACHINE_ENVIRONMENT_u0|STATE_Register~4                                         ; Lost fanout                                                                                                    ;
+; SC_STATEMACHINE_ENVIRONMENT:SC_STATEMACHINE_ENVIRONMENT_u0|STATE_Register~5                                         ; Lost fanout                                                                                                    ;
+; SC_STATEMACHINE_ENVIRONMENT:SC_STATEMACHINE_ENVIRONMENT_u0|STATE_Register~6                                         ; Lost fanout                                                                                                    ;
+; SC_STATEMACHINE_ENVIRONMENT:SC_STATEMACHINE_ENVIRONMENT_u0|STATE_Register~7                                         ; Lost fanout                                                                                                    ;
+; SC_STATEMACHINE_ENVIRONMENT:SC_STATEMACHINE_ENVIRONMENT_u0|STATE_Register~8                                         ; Lost fanout                                                                                                    ;
+; SC_STATEMACHINE_ENVIRONMENT:SC_STATEMACHINE_ENVIRONMENT_u0|STATE_Register~9                                         ; Lost fanout                                                                                                    ;
+; SC_STATEMACHINE_ENVIRONMENT:SC_STATEMACHINE_ENVIRONMENT_u0|STATE_Register~10                                        ; Lost fanout                                                                                                    ;
+; SC_STATEMACHINE_ENVIRONMENT:SC_STATEMACHINE_ENVIRONMENT_u0|STATE_Register~11                                        ; Lost fanout                                                                                                    ;
+; SC_STATEMACHINE_CAR:SC_STATEMACHINE_CAR_u0|St_Register~4                                                            ; Lost fanout                                                                                                    ;
+; SC_STATEMACHINE_CAR:SC_STATEMACHINE_CAR_u0|St_Register~5                                                            ; Lost fanout                                                                                                    ;
+; SC_STATEMACHINE_CAR:SC_STATEMACHINE_CAR_u0|St_Register~6                                                            ; Lost fanout                                                                                                    ;
+; matrix_ctrl:MAXC_u0|state_reg.DISPLAY_TEST                                                                          ; Stuck at GND due to stuck port data_in                                                                         ;
+; matrix_ctrl:MAXC_u0|state_reg.STOP                                                                                  ; Stuck at GND due to stuck port data_in                                                                         ;
+; matrix_ctrl:MAXC_u0|state_reg.DISPLAY_TEST_WAIT2FINISH                                                              ; Stuck at GND due to stuck port data_in                                                                         ;
+; Total Number of Removed Registers = 77                                                                              ;                                                                                                                ;
++---------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                     ;
++--------------------------------------------+---------------------------+--------------------------------------------------------+
+; Register name                              ; Reason for Removal        ; Registers Removed due to This Register                 ;
++--------------------------------------------+---------------------------+--------------------------------------------------------+
+; matrix_ctrl:MAXC_u0|state_reg.DISPLAY_TEST ; Stuck at GND              ; matrix_ctrl:MAXC_u0|state_reg.DISPLAY_TEST_WAIT2FINISH ;
+;                                            ; due to stuck port data_in ;                                                        ;
++--------------------------------------------+---------------------------+--------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 266   ;
+; Number of registers using Synchronous Clear  ; 85    ;
+; Number of registers using Synchronous Load   ; 15    ;
+; Number of registers using Asynchronous Clear ; 224   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 125   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                ;
++-----------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                 ; Fan out ;
++-----------------------------------------------------------------------------------+---------+
+; SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0|Random1:Random1_u0|random[7] ; 2       ;
+; SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0|Random1:Random1_u0|random[0] ; 3       ;
+; Total number of inverted registers = 2                                            ;         ;
++-----------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |BB_SYSTEM|SC_COUNTER_SCORE:SC_COUNTER_SCORE_u0|R_Register[1]                                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |BB_SYSTEM|matrix_ctrl:MAXC_u0|shift_reg_start_done:shift_reg_start_done_unit_0|cnt_reg[0]                          ;
+; 3:1                ; 56 bits   ; 112 LEs       ; 56 LEs               ; 56 LEs                 ; Yes        ; |BB_SYSTEM|SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u3|REGGENERAL_Register[3] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |BB_SYSTEM|matrix_ctrl:MAXC_u0|shift_reg_start_done:shift_reg_start_done_unit_0|r_reg[13]                           ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |BB_SYSTEM|matrix_ctrl:MAXC_u0|shift_reg_start_done:shift_reg_start_done_unit_0|r_reg[3]                            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |BB_SYSTEM|SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u7|REGGENERAL_Register[2] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |BB_SYSTEM|SC_REGSHIFTER_CAR:SC_REGSHIFTER_CAR_u0|RegSHIFTER_Register[6]                                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |BB_SYSTEM|SC_STATEMACHINE_ENVIRONMENT:SC_STATEMACHINE_ENVIRONMENT_u0|STATE_Signal                                  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |BB_SYSTEM|CC_TRANSITION:CC_TRANSITION_u0|transition_fila3_bus_out[4]                                               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |BB_SYSTEM|CC_TRANSITION:CC_TRANSITION_u0|transition_fila5_bus_out                                                  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |BB_SYSTEM|matrix_ctrl:MAXC_u0|state_reg                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SI_DEBOUNCE:DB_START_u0 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; N              ; 11    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SI_DEBOUNCE:DB_RIGHT_u0 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; N              ; 11    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SI_DEBOUNCE:DB_LEFT_u0 ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; N              ; 11    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_STATEMACHINE_CAR:SC_STATEMACHINE_CAR_u0 ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; St_RESET       ; 000   ; Unsigned Binary                                                ;
+; St_START       ; 001   ; Unsigned Binary                                                ;
+; St_READY       ; 010   ; Unsigned Binary                                                ;
+; St_RIGHT_0     ; 011   ; Unsigned Binary                                                ;
+; St_RIGHT_1     ; 100   ; Unsigned Binary                                                ;
+; St_LEFT_0      ; 101   ; Unsigned Binary                                                ;
+; St_LEFT_1      ; 110   ; Unsigned Binary                                                ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_REGSHIFTER_CAR:SC_REGSHIFTER_CAR_u0 ;
++----------------------+-------+------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                 ;
++----------------------+-------+------------------------------------------------------+
+; RegSHIFTER_DATAWIDTH ; 8     ; Signed Integer                                       ;
++----------------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u7 ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                                                            ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+; REGGENERAL_DATAWIDTH ; 8     ; Signed Integer                                                                                  ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u6 ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                                                            ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+; REGGENERAL_DATAWIDTH ; 8     ; Signed Integer                                                                                  ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u5 ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                                                            ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+; REGGENERAL_DATAWIDTH ; 8     ; Signed Integer                                                                                  ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u4 ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                                                            ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+; REGGENERAL_DATAWIDTH ; 8     ; Signed Integer                                                                                  ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u3 ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                                                            ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+; REGGENERAL_DATAWIDTH ; 8     ; Signed Integer                                                                                  ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u2 ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                                                            ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+; REGGENERAL_DATAWIDTH ; 8     ; Signed Integer                                                                                  ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u1 ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                                                            ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+; REGGENERAL_DATAWIDTH ; 8     ; Signed Integer                                                                                  ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u0 ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                                                            ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+; REGGENERAL_DATAWIDTH ; 8     ; Signed Integer                                                                                  ;
++----------------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0|SC_STATEMACHINE_RANDOM:SC_STATEMACHINE_RANDOM_u0 ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                      ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+; St_RESET       ; 000   ; Unsigned Binary                                                                                                           ;
+; St_START       ; 001   ; Unsigned Binary                                                                                                           ;
+; St_READY       ; 010   ; Unsigned Binary                                                                                                           ;
+; St_LEVEL1      ; 011   ; Unsigned Binary                                                                                                           ;
+; St_LEVEL2      ; 100   ; Unsigned Binary                                                                                                           ;
+; St_LEVEL3      ; 101   ; Unsigned Binary                                                                                                           ;
+; St_LEVEL0      ; 110   ; Unsigned Binary                                                                                                           ;
+; St_LEVEL00     ; 111   ; Unsigned Binary                                                                                                           ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0|Random1:Random1_u0 ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; DATAWIDTH_BUS  ; 8     ; Signed Integer                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_COUNTER_SCORE:SC_COUNTER_SCORE_u0 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0 ;
++-----------------------+-------+--------------------------------------------------------------------------------------------+
+; Parameter Name        ; Value ; Type                                                                                       ;
++-----------------------+-------+--------------------------------------------------------------------------------------------+
+; COUNTER_DATAWIDTH_BUS ; 26    ; Signed Integer                                                                             ;
++-----------------------+-------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0 ;
++-----------------------+-------+--------------------------------------------------------------------------------------------+
+; Parameter Name        ; Value ; Type                                                                                       ;
++-----------------------+-------+--------------------------------------------------------------------------------------------+
+; COUNTER_DATAWIDTH_BUS ; 25    ; Signed Integer                                                                             ;
++-----------------------+-------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0 ;
++-----------------------+-------+--------------------------------------------------------------------------------------------+
+; Parameter Name        ; Value ; Type                                                                                       ;
++-----------------------+-------+--------------------------------------------------------------------------------------------+
+; COUNTER_DATAWIDTH_BUS ; 23    ; Signed Integer                                                                             ;
++-----------------------+-------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SC_COUNTER_TRANSITION:SC_COUNTER_TRANSITION_u0 ;
++-----------------------+-------+-------------------------------------------------------------+
+; Parameter Name        ; Value ; Type                                                        ;
++-----------------------+-------+-------------------------------------------------------------+
+; COUNTER_DATAWIDTH_BUS ; 27    ; Signed Integer                                              ;
++-----------------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: matrix_ctrl:MAXC_u0|shift_reg_start_done:shift_reg_start_done_unit_0 ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 16    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "matrix_ctrl:MAXC_u0|shift_reg_start_done:shift_reg_start_done_unit_0" ;
++-----------+-------+----------+-------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                           ;
++-----------+-------+----------+-------------------------------------------------------------------+
+; d[15..12] ; Input ; Info     ; Stuck at GND                                                      ;
++-----------+-------+----------+-------------------------------------------------------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "matrix_ctrl:MAXC_u0" ;
++--------------+-------+----------+---------------+
+; Port         ; Type  ; Severity ; Details       ;
++--------------+-------+----------+---------------+
+; intensity[3] ; Input ; Info     ; Stuck at VCC  ;
+; intensity[2] ; Input ; Info     ; Stuck at GND  ;
+; intensity[1] ; Input ; Info     ; Stuck at VCC  ;
+; intensity[0] ; Input ; Info     ; Stuck at GND  ;
++--------------+-------+----------+---------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0" ;
++----------------------------------+-------+----------+------------------+
+; Port                             ; Type  ; Severity ; Details          ;
++----------------------------------+-------+----------+------------------+
+; SC_COUNTER_VELOCITY_ENABLE_InLow ; Input ; Info     ; Stuck at GND     ;
++----------------------------------+-------+----------+------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SC_STATEMACHINE_ENVIRONMENT:SC_STATEMACHINE_ENVIRONMENT_u0"                                                                                                                                                       ;
++-----------------------------------------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                                    ; Type  ; Severity ; Details                                                                                                                                                                         ;
++-----------------------------------------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; SC_STATEMACHINE_ENVIRONMENT_LEVEL_InBus ; Input ; Warning  ; Input port expression (2 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "SC_STATEMACHINE_ENVIRONMENT_LEVEL_InBus[2..2]" will be connected to GND. ;
++-----------------------------------------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 16                          ;
+; cycloneiii_ff         ; 266                         ;
+;     CLR               ; 71                          ;
+;     CLR SCLR          ; 27                          ;
+;     CLR SLD           ; 1                           ;
+;     ENA CLR           ; 86                          ;
+;     ENA CLR SCLR      ; 25                          ;
+;     ENA CLR SLD       ; 14                          ;
+;     SCLR              ; 33                          ;
+;     plain             ; 9                           ;
+; cycloneiii_lcell_comb ; 581                         ;
+;     arith             ; 157                         ;
+;         2 data inputs ; 147                         ;
+;         3 data inputs ; 10                          ;
+;     normal            ; 424                         ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 106                         ;
+;         3 data inputs ; 100                         ;
+;         4 data inputs ; 202                         ;
+;                       ;                             ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 3.71                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Wed Nov 25 12:11:42 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BB_SYSTEM -c BB_SYSTEM
+Info (20032): Parallel compilation is enabled and will use up to 2 processors
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/random1.v
+    Info (12023): Found entity 1: Random1 File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/Random1.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_counter_vel3.v
+    Info (12023): Found entity 1: SC_COUNTER_VEL3 File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL3.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_counter_vel2.v
+    Info (12023): Found entity 1: SC_COUNTER_VEL2 File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL2.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_counter_vel1.v
+    Info (12023): Found entity 1: SC_COUNTER_VEL1 File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VEL1.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_reggeneral.v
+    Info (12023): Found entity 1: SC_REGGENERAL File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGGENERAL.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_counter_transition.v
+    Info (12023): Found entity 1: SC_COUNTER_TRANSITION File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_TRANSITION.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_statemachine_environment.v
+    Info (12023): Found entity 1: SC_STATEMACHINE_ENVIRONMENT File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_ENVIRONMENT.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_statemachine_car.v
+    Info (12023): Found entity 1: SC_STATEMACHINE_CAR File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_CAR.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_regshifter_car.v
+    Info (12023): Found entity 1: SC_REGSHIFTER_CAR File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGSHIFTER_CAR.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/si_debounce.v
+    Info (12023): Found entity 1: SI_DEBOUNCE File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SI_DEBOUNCE.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/shift_reg_start_done.v
+    Info (12023): Found entity 1: shift_reg_start_done File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/shift_reg_start_done.v Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/max7219_ctrl.v
+    Info (12023): Found entity 1: matrix_ctrl File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/max7219_ctrl.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/imagen.v
+    Info (12023): Found entity 1: IMAGEN File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/IMAGEN.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_transition.v
+    Info (12023): Found entity 1: CC_TRANSITION File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_TRANSITION.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_selector_screen.v
+    Info (12023): Found entity 1: CC_SELECTOR_SCREEN File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_SELECTOR_SCREEN.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_joiner.v
+    Info (12023): Found entity 1: CC_JOINER File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_JOINER.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file bb_system.v
+    Info (12023): Found entity 1: BB_SYSTEM File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_counter_velocity.v
+    Info (12023): Found entity 1: SC_COUNTER_VELOCITY File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VELOCITY.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_counter_score.v
+    Info (12023): Found entity 1: SC_COUNTER_SCORE File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_SCORE.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_register_environment.v
+    Info (12023): Found entity 1: SC_REGISTER_ENVIRONMENT File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGISTER_ENVIRONMENT.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_comparator_level.v
+    Info (12023): Found entity 1: CC_COMPARATOR_LEVEL File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_COMPARATOR_LEVEL.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_generator_environment.v
+    Info (12023): Found entity 1: SC_GENERATOR_ENVIRONMENT File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_GENERATOR_ENVIRONMENT.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_comparator_lose.v
+    Info (12023): Found entity 1: CC_COMPARATOR_LOSE File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/CC_COMPARATOR_LOSE.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_statemachine_random.v
+    Info (12023): Found entity 1: SC_STATEMACHINE_RANDOM File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_STATEMACHINE_RANDOM.v Line: 6
+Info (12127): Elaborating entity "BB_SYSTEM" for the top level hierarchy
+Info (12128): Elaborating entity "SI_DEBOUNCE" for hierarchy "SI_DEBOUNCE:DB_START_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 127
+Info (12128): Elaborating entity "SC_STATEMACHINE_CAR" for hierarchy "SC_STATEMACHINE_CAR:SC_STATEMACHINE_CAR_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 166
+Info (12128): Elaborating entity "SC_REGSHIFTER_CAR" for hierarchy "SC_REGSHIFTER_CAR:SC_REGSHIFTER_CAR_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 180
+Info (12128): Elaborating entity "SC_STATEMACHINE_ENVIRONMENT" for hierarchy "SC_STATEMACHINE_ENVIRONMENT:SC_STATEMACHINE_ENVIRONMENT_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 201
+Info (12128): Elaborating entity "SC_REGISTER_ENVIRONMENT" for hierarchy "SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 222
+Info (12128): Elaborating entity "SC_REGGENERAL" for hierarchy "SC_REGISTER_ENVIRONMENT:SC_REGISTER_ENVIRONMENT_u0|SC_REGGENERAL:SC_REGGENERAL_u7" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_REGISTER_ENVIRONMENT.v Line: 69
+Info (12128): Elaborating entity "SC_GENERATOR_ENVIRONMENT" for hierarchy "SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 236
+Info (12128): Elaborating entity "SC_STATEMACHINE_RANDOM" for hierarchy "SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0|SC_STATEMACHINE_RANDOM:SC_STATEMACHINE_RANDOM_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_GENERATOR_ENVIRONMENT.v Line: 57
+Info (12128): Elaborating entity "Random1" for hierarchy "SC_GENERATOR_ENVIRONMENT:SC_GENERATOR_ENVIRONMENT_u0|Random1:Random1_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_GENERATOR_ENVIRONMENT.v Line: 66
+Info (12128): Elaborating entity "CC_COMPARATOR_LOSE" for hierarchy "CC_COMPARATOR_LOSE:CC_COMPARATOR_LOSE_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 247
+Info (12128): Elaborating entity "SC_COUNTER_SCORE" for hierarchy "SC_COUNTER_SCORE:SC_COUNTER_SCORE_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 261
+Info (12128): Elaborating entity "CC_COMPARATOR_LEVEL" for hierarchy "CC_COMPARATOR_LEVEL:CC_COMPARATOR_LEVEL_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 270
+Info (12128): Elaborating entity "SC_COUNTER_VELOCITY" for hierarchy "SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 283
+Info (12128): Elaborating entity "SC_COUNTER_VEL1" for hierarchy "SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL1:SC_COUNTER_VEL1_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VELOCITY.v Line: 54
+Info (12128): Elaborating entity "SC_COUNTER_VEL2" for hierarchy "SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL2:SC_COUNTER_VEL2_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VELOCITY.v Line: 66
+Info (12128): Elaborating entity "SC_COUNTER_VEL3" for hierarchy "SC_COUNTER_VELOCITY:SC_COUNTER_VELOCITY_u0|SC_COUNTER_VEL3:SC_COUNTER_VEL3_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/SC_COUNTER_VELOCITY.v Line: 78
+Info (12128): Elaborating entity "SC_COUNTER_TRANSITION" for hierarchy "SC_COUNTER_TRANSITION:SC_COUNTER_TRANSITION_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 295
+Info (12128): Elaborating entity "CC_JOINER" for hierarchy "CC_JOINER:CC_JOINER_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 321
+Info (12128): Elaborating entity "CC_TRANSITION" for hierarchy "CC_TRANSITION:CC_TRANSITION_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 338
+Info (12128): Elaborating entity "CC_SELECTOR_SCREEN" for hierarchy "CC_SELECTOR_SCREEN:CC_SELECTOR_SCREEN_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 373
+Info (12128): Elaborating entity "IMAGEN" for hierarchy "IMAGEN:IMG_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 390
+Info (12128): Elaborating entity "matrix_ctrl" for hierarchy "matrix_ctrl:MAXC_u0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.v Line: 405
+Warning (10036): Verilog HDL or VHDL warning at max7219_ctrl.v(58): object "Trig_SignalNEG" assigned a value but never read File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/max7219_ctrl.v Line: 58
+Warning (10230): Verilog HDL assignment warning at max7219_ctrl.v(50): truncated value with size 32 to match size of target (4) File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/max7219_ctrl.v Line: 50
+Warning (10230): Verilog HDL assignment warning at max7219_ctrl.v(51): truncated value with size 32 to match size of target (4) File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/max7219_ctrl.v Line: 51
+Warning (10230): Verilog HDL assignment warning at max7219_ctrl.v(260): truncated value with size 32 to match size of target (4) File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/max7219_ctrl.v Line: 260
+Warning (10240): Verilog HDL Always Construct warning at max7219_ctrl.v(154): inferring latch(es) for variable "ctrl_sr", which holds its previous value in one or more paths through the always construct File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/max7219_ctrl.v Line: 154
+Warning (10230): Verilog HDL assignment warning at max7219_ctrl.v(278): truncated value with size 32 to match size of target (3) File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/max7219_ctrl.v Line: 278
+Info (10041): Inferred latch for "ctrl_sr[0]" at max7219_ctrl.v(154) File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/max7219_ctrl.v Line: 154
+Info (10041): Inferred latch for "ctrl_sr[1]" at max7219_ctrl.v(154) File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/max7219_ctrl.v Line: 154
+Info (12128): Elaborating entity "shift_reg_start_done" for hierarchy "matrix_ctrl:MAXC_u0|shift_reg_start_done:shift_reg_start_done_unit_0" File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/max7219_ctrl.v Line: 109
+Warning (10230): Verilog HDL assignment warning at shift_reg_start_done.v(69): truncated value with size 32 to match size of target (16) File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/shift_reg_start_done.v Line: 69
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/rtl/Random1.v Line: 22
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 21 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 605 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 11 output pins
+    Info (21061): Implemented 589 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 637 megabytes
+    Info: Processing ended: Wed Nov 25 12:12:01 2020
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:31
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/BB_SYSTEM.map.smsg.
+
+

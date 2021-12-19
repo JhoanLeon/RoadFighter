@@ -1,0 +1,108 @@
+EDA Netlist Writer report for BB_SYSTEM
+Wed Nov 25 12:12:30 2020
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. EDA Netlist Writer Summary
+  3. Simulation Settings
+  4. Simulation Generated Files
+  5. EDA Netlist Writer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------+
+; EDA Netlist Writer Summary                                        ;
++---------------------------+---------------------------------------+
+; EDA Netlist Writer Status ; Successful - Wed Nov 25 12:12:30 2020 ;
+; Revision Name             ; BB_SYSTEM                             ;
+; Top-level Entity Name     ; BB_SYSTEM                             ;
+; Family                    ; Cyclone IV E                          ;
+; Simulation Files Creation ; Successful                            ;
++---------------------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                           ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Option                                                                                            ; Setting                   ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
+; Generate functional simulation netlist                                                            ; Off                       ;
+; Time scale                                                                                        ; 1 ps                      ;
+; Truncate long hierarchy paths                                                                     ; Off                       ;
+; Map illegal HDL characters                                                                        ; Off                       ;
+; Flatten buses into individual nodes                                                               ; Off                       ;
+; Maintain hierarchy                                                                                ; Off                       ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                       ;
+; Enable glitch filtering                                                                           ; Off                       ;
+; Do not write top level VHDL entity                                                                ; Off                       ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                       ;
+; Architecture name in VHDL output netlist                                                          ; structure                 ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                       ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                       ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                             ;
++--------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                        ;
++--------------------------------------------------------------------------------------------------------+
+; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim/BB_SYSTEM_6_1200mv_85c_slow.vo     ;
+; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim/BB_SYSTEM_6_1200mv_0c_slow.vo      ;
+; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim/BB_SYSTEM_min_1200mv_0c_fast.vo    ;
+; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim/BB_SYSTEM.vo                       ;
+; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim/BB_SYSTEM_6_1200mv_85c_v_slow.sdo  ;
+; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim/BB_SYSTEM_6_1200mv_0c_v_slow.sdo   ;
+; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim/BB_SYSTEM_min_1200mv_0c_v_fast.sdo ;
+; D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim/BB_SYSTEM_v.sdo                    ;
++--------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------+
+; EDA Netlist Writer Messages ;
++-----------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Wed Nov 25 12:12:28 2020
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off BB_SYSTEM -c BB_SYSTEM
+Info (204019): Generated file BB_SYSTEM_6_1200mv_85c_slow.vo in folder "D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file BB_SYSTEM_6_1200mv_0c_slow.vo in folder "D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file BB_SYSTEM_min_1200mv_0c_fast.vo in folder "D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file BB_SYSTEM.vo in folder "D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file BB_SYSTEM_6_1200mv_85c_v_slow.sdo in folder "D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file BB_SYSTEM_6_1200mv_0c_v_slow.sdo in folder "D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file BB_SYSTEM_min_1200mv_0c_v_fast.sdo in folder "D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file BB_SYSTEM_v.sdo in folder "D:/Projects/Proyectos Quartus/PRJ01_ROADFIGHTER/simulation/modelsim/" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 549 megabytes
+    Info: Processing ended: Wed Nov 25 12:12:30 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
